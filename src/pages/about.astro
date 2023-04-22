@@ -1,79 +1,20 @@
 ---
-const pageTitle = "About Me";
-const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-const happy = true;
-const finished = false;
-const goal = 3;
+import MainLayout from "../layouts/MainLayout.astro";
 
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
+const myname = "Sukhminder Singh";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+<MainLayout title="My Blog">
 
-    <title>{pageTitle}</title>
-
-    <style define:vars={{ skillColor, fontWeight, textCase }}>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
-      .skill {
-        color: var(--skillColor);
-        font-weight: var(--fontWeight);
-        text-transform: var(--textCase);
-      }
-    </style>
-  </head>
-  <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <h1>My Astro Site</h1>
-    <h2>{pageTitle}</h2>
-    <p>I am working throught Astro working tutorial</p>
-    <p>I am working throught Astro working tutorial</p>
-    <p>Here are a few facts about me:</p>
-    <ul>
-      <li>My name is {identity.firstName}.</li>
-      <li>
-        I live in {identity.country} and I work as a {identity.occupation}.
-      </li>
-      {
-        identity.hobbies.length >= 2 && (
-          <li>
-            Two of my hobbies are: {identity.hobbies[0]} and{" "}
-            {identity.hobbies[1]}
-          </li>
-        )
-      }
-    </ul>
-    <p>My skills are:</p>
-    <ul>
-      {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
-    {happy && <p>I am happy to be learning Astro!</p>}
-
-    {finished && <p>I finished this tutorial!</p>}
-
-    {
-      goal === 3 ? (
-        <p>My goal is to finish in 3 days.</p>
-      ) : (
-        <p>My goal is not 3 days.</p>
-      )
-    }
-  </body>
-</html>
+  <section class="container about" aria-label="About Me">
+    <img src="/images/headshot.jpeg" alt="My headshot" height="330" />
+    <div class="content">
+      <h1 class="h1">{myname}</h1>
+      <p>
+        I am postdoctoral researcher at Friedrich-Alexander-Universität (FAU)
+        Erlangen-Nürnberg. I obtained my masters in Computational Engineering
+        and subsequently my doctorate from FAU.
+      </p>
+    </div>
+  </section>
+</MainLayout>

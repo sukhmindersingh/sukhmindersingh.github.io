@@ -1,43 +1,22 @@
 ---
-import Navigation from "../components/Navigation.astro";
+// import Navigation from "../components/Navigation.astro";
 // import Footer from "../components/Footer.astro";
 
+// component imports
+import MainLayout from "../layouts/MainLayout.astro";
 const myname = "Sukhminder Singh";
-const myemail = "sukhminder.singh@fau.de";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Sukhminder Singh @ FAU Erlangen-Nürnberg</title>
-  </head>
-  <body>
-    <h1>{myname}</h1>
-
-    Email: {myemail}
-    <br />
-    <!-- Mb: +4917641781811 -->
-    <br />
-    <!-- Room: 02.016 -->
-    <br />
-    Address: Cauerstraße 11, 91058 Erlangen
-    <br />
-    <!-- <Navigation /> -->
-
-    <br />
-    <br />
-
-    I am postdoctoral researcher at Friedrich-Alexander-Universität (FAU)
-    Erlangen-Nürnberg. I obtained my masters in Computational Engineering and
-    subsequently doctorate from FAU.
-
-    <h2>Publications</h2>
-
-    <!-- <Footer /> -->
-
-    <h2>Conferences</h2>
-  </body>
-</html>
+<MainLayout title="My Blog">
+  <section class="container about" aria-label="About Me">
+    <img src="/images/headshot.jpeg" alt="My headshot" height="330" />
+    <div class="content">
+      <h1 class="h1">{myname}</h1>
+      <p>
+        Hi 👋, I am postdoctoral researcher at Friedrich-Alexander-Universität (FAU)
+        Erlangen-Nürnberg. I obtained my masters in Computational Engineering
+        and subsequently my doctorate from FAU.
+      </p>
+    </div>
+  </section>
+</MainLayout>

@@ -1,8 +1,15 @@
 ---
-const platform = "github";
-const username = "withastro";
 ---
 
 <footer>
-  <p>Learn more about my projects on <a href={`https://www.${platform}.com/${username}`}>{platform}</a>!</p>
+  <small>
+    Copyright &copy;
+    <span>id="copyright"</span> | All rights reserved
+  </small>
 </footer>
+
+<script>
+  document.querySelector("#copyright").textContent = new Date()
+    .getFullYear()
+    .toString();
+</script>
