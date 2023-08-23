@@ -1,70 +1,9 @@
 ---
-// import Navigation from "../components/Navigation.astro";
-// import Footer from "../components/Footer.astro";
-
-// component imports
-import MainLayout from "../layouts/MainLayout.astro";
-const myname = "Sukhminder Singh";
+import Resume from "./resume.astro";
 ---
 
-<MainLayout title="My Blog">
-  <section class="container about" aria-label="About Me">
-    <img src="/images/headshot.jpeg" alt="My headshot" height="330" />
-    <div class="content">
-      <h1 class="h1">{myname}</h1>
-      <p>
-        Hi 👋, I am postdoctoral researcher at Friedrich-Alexander-Universität
-        (FAU) Erlangen-Nürnberg. I obtained my masters in Computational
-        Engineering and subsequently my doctorate from FAU.
-      </p>
-    </div>
-  </section>
+<Resume />
 
-  <section class="container" aria-label="Publications">
-    <h2 class="h2">Publications</h2>
-    <div class="post-container">
-      <ul>
-        <li>
-          S. Singh, L. Pflug, J. Mergheim, and M. Stingl. Robust design
-          optimization for enhancing delamination resistance of composites.
-          International Journal for Numerical Methods in Engineering, p. 1-24,
-          2022.
-        </li>
 
-        <li>
-          <b>S. Singh</b>
-          S. Singh, L. Pflug, and M. Stingl. Material optimization to enhance delamination
-          resistance of composite structures using viscous regularization. Computer
-          Methods in Applied Mechanics and Engineering, vol. 382, p. 113 881, 2021.
-        </li>
-      </ul>
-    </div>
-  </section>
-  <section class="container" aria-label="Publications">
-    <h2 class="h2">Conference Publications</h2>
-    <div class="post-container">
-      <ul>
-        <li>
-          S. Singh, M. Stingl. Material optimization for controlling interfacial
-          damage in composite structures, Proceedings in Applied Mathematics and
-          Mechanics, 20, 2021.
-        </li>
-      </ul>
-    </div>
-  </section>
 
-  <section class="container" aria-label="Contact">
-    <h2 class="h2">Contact</h2>
-    <div class="post-container">
-      Chair of Applied Mathematics (Continuous Optimization) <br />
-      Friedrich-Alexander-Universitat Erlangen-Universität <br />
-      Cauerstraße 11, 91054 Erlangen <br />
-      Germany <br />
-      <br />
-      E-Mail: sukhminder.singh@fau.de
-      <!-- <a href="mailto:sukhminder.singh@fau.de"> -->
-        <!-- sukhminder.singh@fau.de</a -->
-      <!-- ><br /> -->
-    </div>
-  </section>
-</MainLayout>
+

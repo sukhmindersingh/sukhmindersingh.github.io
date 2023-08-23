@@ -1,0 +1,28 @@
+---
+export interface Props {
+  /** left column, normally displays time frame  */
+  name: string;
+  /** title will be displayed in bold */
+  title?: string;
+  /** description is a longer text displayed below title */
+  description: string;
+  /** sub title is placed on the right of title */
+  subTitle?: string;
+}
+
+const { description, name, title, subTitle } = Astro.props;
+---
+
+<div class="flex flex-row">
+  <div class="mr-2 w-40">{name}</div>
+
+  <div class="flex-1">
+    <div>
+      <!-- {title && <span class="font-bold">{title}</span>} -->
+      <!-- {subTitle && <span>{subTitle}</span>} -->
+      <span class="font-bold"><Fragment set:html={title} />,</span>
+      <i><Fragment set:html={subTitle} />.</i>
+    </div>
+    <div><Fragment set:html={description} /></div>
+  </div>
+</div>

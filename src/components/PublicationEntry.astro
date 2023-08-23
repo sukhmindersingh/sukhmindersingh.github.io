@@ -1,0 +1,14 @@
+---
+const { journal, name, title, year, link } = Astro.props;
+
+// Helper function to render HTML content safely
+const createHTML = (html) => ({ __html: html });
+---
+
+<div class="grid grid-cols-[10%_1fr] gap-4">
+  <div class="text-right">{year}</div>
+  <div class="text-left">
+    <Fragment set:html={name} />.
+    <a href={link}>{title}. <i>{journal}</i>, {year}</a>.
+  </div>
+</div>

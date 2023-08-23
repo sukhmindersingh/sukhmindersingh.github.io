@@ -1,5 +1,5 @@
 {
-  "name": "shaky-satellite",
+  "name": "mywebsite",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,12 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.3.0",
-    "astro-icon": "^0.8.0",
-    "postcss": "^8.4.23",
-    "postcss-preset-env": "^8.3.2"
-  },
-  "devDependencies": {
-    "sass": "^1.62.0"
+    "@astrojs/tailwind": "^4.0.0",
+    "astro": "^2.9.1",
+    "tailwindcss": "^3.3.3"
   }
 }

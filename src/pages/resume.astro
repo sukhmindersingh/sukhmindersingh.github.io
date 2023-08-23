@@ -1,0 +1,296 @@
+---
+import RowEntry from "../components/RowEntry.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import SocialIcon from "../components/SocialIcon.astro";
+import PublicationEntry from "../components/PublicationEntry.astro";
+
+import MainLayout from "../layouts/main-layout.astro";
+import "../styles/global.css";
+---
+
+<MainLayout>
+  <div>
+    <div class="grid grid-cols-[4fr_1fr_1fr] gap-0 flex items-end mb-4">
+      <div class="font-bold font-serif pb-5 text-4xl">Sukhminder Singh</div>
+      <div class="text-base text-gray-600">
+        <div>Cauerstraße 11</div>
+        <div>91058 Erlangen</div>
+        <div class="flex items-center">
+          <i class="mr-1 inline-block gg-mail"></i>
+          <a
+            class="inline"
+            href="mailto:sukhminder.singh@fau.de"
+            class="hover:text-red-500">sukhminder.singh@fau.de</a
+          >
+        </div>
+      </div>
+      <div class="float-right">
+        <img
+          src="/headshot.jpeg"
+          class="w-100% rounded-full border-2 border-blue-900"
+        />
+      </div>
+    </div>
+
+    <div id="education" class="mb-6">
+      <SectionTitle title="Work Experience" />
+
+      <div class="grid grid-cols-[20%_1fr] gap-x-4 mb-4">
+        <div class="text-right">Feb 2023 - today</div>
+        <div class="text-left">
+          <b>Postdoctoral Researcher</b>, <i
+            >Chair of Applied Mathematics (Continuous Optimization), <br /> Friedrich-Alexander-Universität
+            Erlangen-Nürnberg, Germany</i
+          >.
+          <br />
+          Area of research: Topology optimization of thin walled structures for additive
+          manufacturing.
+        </div>
+      </div>
+
+      <div class="grid grid-cols-[20%_1fr] gap-x-4 mb-4">
+        <div class="text-right">Jul 2013 - Aug 2016</div>
+        <div class="text-left">
+          <b>Assistant Manager</b>, <i>Hero MotoCorp Ltd, Neemrana, India</i>.
+        </div>
+        <div class="text-right">Responsibility</div>
+        <div>
+          Production management of gasoline engine parts of two wheeler
+          vehicles.
+        </div>
+      </div>
+
+      <div class="grid grid-cols-[20%_1fr] gap-x-4 mb-4">
+        <div class="text-right">Jan 2012 - Jun 2012</div>
+        <div class="text-left">
+          <b>Industrial Trainee</b>, <i>Tata Motors Ltd, Lucknow, India</i>.
+        </div>
+      </div>
+
+      <div id="education" class="mb-6">
+        <SectionTitle title="Education" />
+
+        <div class="grid grid-cols-[20%_1fr] gap-x-4 mb-4">
+          <div class="text-right">Apr 2019 - Jan 2023</div>
+          <div class="text-left">
+            <b>Doctorate (Dr.-Ing.) in Mechanical Engineering</b>,
+            <br />
+            <a href="https://www.fau.de/"
+              ><i>Friedrich-Alexander-Universität Erlangen-Nürnberg, Germany</i
+              ></a
+            >.
+          </div>
+          <div class="text-right">Dissertation</div>
+          <div class="text-left">
+            <a
+              href="https://opus4.kobv.de/opus4-fau/frontdoor/index/index/docId/23676"
+              >Structural optimization for fracture resistance of heterogeneous
+              material</a
+            >
+            <br />
+            Advisors: Prof. Michael Stingl, Prof. Dr.-Ing. Julia Mergheim
+          </div>
+
+          <div class="text-right">Grade</div>
+          <div class="text-left">Summa cum laude</div>
+        </div>
+
+        <div class="grid grid-cols-[20%_1fr] gap-x-4 mb-4">
+          <div class="text-right">Oct 2016 - Mar 2019</div>
+          <div class="text-left">
+            <b
+              ><a
+                href="https://www.ce.studium.fau.eu/prospective-students/m-sc-program/"
+                >Master of Science (MSc) in Computational Engineering</a
+              ></b
+            >,
+            <br />
+            <i>Bavarian Graduate School of Computational Engineering (BGCE)</i>, <br
+            />
+            <a href="https://www.fau.de/"
+              ><i>Friedrich-Alexander-Universität Erlangen-Nürnberg, Germany</i
+              ></a
+            >.
+          </div>
+          <div class="text-right">Application field</div>
+          <div class="text-left">Solid mechanics and dynamics</div>
+          <div class="text-right">Thesis</div>
+          <div class="text-left">
+            Upscaling of elastodynamic properties <br />
+            Advisor: Prof. Michael Stingl
+          </div>
+          <div class="text-right">Grade</div>
+          <div class="text-left">1.1</div>
+        </div>
+
+        <div class="grid grid-cols-[20%_1fr] gap-x-4 mb-4">
+          <div class="text-right">Aug 2009 - Jul 2013</div>
+          <div class="text-left">
+            <b>Bachelor of Engineering (BE) in Mechanical Engineering</b>,
+            <br />
+            <a href="https://pec.ac.in">
+              <i
+                >Punjab Engineering College (Deemed to be University),
+                Chandigarh, India</i
+              ></a
+            >.
+          </div>
+          <div class="text-right">CGPA</div>
+          <div class="text-left">9.25/10</div>
+        </div>
+      </div>
+
+      <div>
+        <SectionTitle title="Publications" />
+
+        <div class="mb-2">Journal Articles</div>
+
+        <PublicationEntry
+          title="On optimization of heterogeneous materials for enhanced resistance to bulk fracture"
+          name="<b>Sukhminder Singh</b>, Lukas Pflug, Julia Mergheim, Michael Stingl"
+          journal="Forces in Mechanics, vol. 12, 100200"
+          year="2023"
+          link="https://doi.org/10.1016/j.finmec.2023.100200"
+        />
+
+        <PublicationEntry
+          title="Robust design optimization for enhancing delamination resistance of composites"
+          name="<b>Sukhminder Singh</b>, Lukas Pflug, Julia Mergheim, Michael Stingl"
+          journal="International Journal for Numerical Methods in Engineering, p. 1-24"
+          year="2022"
+          link="https://doi.org/10.1002/nme.7168"
+        />
+
+        <PublicationEntry
+          title="Material optimization to enhance delamination resistance of composite structures using viscous regularization"
+          name="<b>Sukhminder Singh</b>, Lukas Pflug, Michael Stingl"
+          journal="Computer Methods in Applied Mechanics and Engineering, vol. 382, p. 113 881"
+          year="2021"
+          link="https://doi.org/10.1016/j.cma.2021.113881"
+        />
+        <div class="mb-2 mt-2">In Conference Proceedings</div>
+        <PublicationEntry
+          name="<b>Sukhminder Singh</b>, Michael Stingl"
+          title="Material optimization for controlling interfacial damage in composite structures"
+          journal="Proceedings in Applied Mathematics and Mechanics, 20"
+          year="2021"
+          link="https://doi.org/10.1002/pamm.202000344"
+        />
+      </div>
+
+      <div>
+        <SectionTitle title="Conference Talks" />
+        <div class="grid grid-cols-[10%_1fr] gap-x-4">
+          <div class="text-right">2023</div>
+          <div class="text-left">
+            XVII International Conference on Computational Plasticity <b
+              >COMPLAS 2023</b
+            >, <i>Barcelona</i>. <br />
+            Title: On optimization of heterogeneous materials for resistance to bulk
+            fracture.
+          </div>
+          <div class="text-right">2023</div>
+          <div class="text-left">
+            The 15th World Congress of Structural and Multidisciplinary
+            Optimization, <b>WCSMO-15</b>, <i>Cork</i>. <br />
+            Title: Optimizing effective fracture toughness of heterogeneous materials
+            under mode-I loading using Bayesian methods.
+          </div>
+
+          <div class="text-right">2022</div>
+          <div class="text-left">
+            15th World Congress on Computational Mechanics & 8th Asian Pacific
+            Congress on Computational Mechanics, <b>WCCM-APCOM 2022</b>
+            <i>(virtual)</i>.
+            <br />
+            Title: Surrogate-based stochastic optimization for enhancing interfacial
+            fracture resistance of heterogeneous structures.
+          </div>
+
+          <div class="text-right">2021</div>
+          <div class="text-left">
+            <b>GAMM Annual Conference 2020@21</b>
+            <i>(virtual)</i>.
+            <br />
+            Title: Optimal control of quasi-static crack growth in two-dimensional
+            composite structures using gradient-based material optimization.
+          </div>
+          <div class="text-right">2021</div>
+          <div class="text-left">
+            The 14th World Congress of Structural and Multidisciplinary
+            Optimization <b>WCSMO-14</b>
+            <i>(virtual)</i>.
+            <br />
+            Title: Computational design of heterogeneous materials to enhance interfacial
+            fracture resistance using gradient-based material optimization.
+          </div>
+        </div>
+
+        <div>
+          <SectionTitle title="Achievements and Recognitions" />
+
+          <div class="grid grid-cols-[10%_1fr] gap-x-4 mb-4">
+            <div class="text-right">2018</div>
+            <div>
+              <a
+                href="https://prace-ri.eu/about/prace-awards/sohpcprize/sohpcprize-2018/"
+                ><b>Best Performance Award</b></a
+              > in PRACE Summer of HPC, 2018.
+            </div>
+            <div class="text-right">2018</div>
+            <div>
+              Selected for <a href="https://prace-ri.eu/prace-summer-of-hpc/"
+                ><b>PRACE Summer of HPC, 2018</b></a
+              >, <i>Jaume I University, Castellón de la Plana, Spain</i>. <br />
+              Project: <a href="https://www.youtube.com/watch?v=gignTeoDlgE">
+                Get more throughput, resize me! A case of study: LAMMPS
+                malleable.</a
+              >
+            </div>
+            <div class="text-right">2018</div>
+            <div class="text-left">
+              Selected for participation in
+              <a href="https://ferienakademie.de/"
+                ><b>Ferienakademie, 2018</b></a
+              >, <i>Sarntal</i>.
+            </div>
+            <div class="text-right">2017</div>
+            <div class="text-left">
+              Selected for participation in
+              <a href="https://ferienakademie.de/"
+                ><b>Ferienakademie, 2017</b></a
+              >, <i>Sarntal</i>.
+            </div>
+            <div class="text-right">2009-2012</div>
+            <div class="text-left">
+              <b>Merit scholarship</b> in form of fee waiver from 2009-2012 for being
+              in top 5% of students in BE Mechanical Engineering batch of <i
+                >Punjab Engineering College, Chandigarh, India</i
+              >.
+            </div>
+            <div class="text-right">2009</div>
+            <div>
+              Scored All India Rank 4389 in All India Engineering Entrance Exam
+              (AIEEE), 2009, being in top \(1\%\) of test takers.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <SectionTitle title="Languages" />
+        English (Fluent), Hindi (Native), Punjabi (Native), German (B1)
+      </div>
+
+      <div class="mb-6">
+        <SectionTitle title="Referee" />
+        <b>Prof. Michael Stingl</b>
+        <br />
+        Chair of Applied Mathematics (Continuous Optimization), <br />
+        Friedrich-Alexander-Universität Erlangen-Nürnberg, Germany. <br />
+        <i class="mr-1 inline-block gg-mail"></i>
+        michael.stingl@fau.de
+      </div>
+    </div>
+  </div>
+</MainLayout>
